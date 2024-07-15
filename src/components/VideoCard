@@ -1,0 +1,16 @@
+// src/components/VideoCard.js
+import React from 'react';
+
+function VideoCard({ video, onEditClick, onDeleteClick }) {
+  return (
+    <div className="video-card">
+      <img src={video.imagen} alt={video.titulo} />
+      <h3>{video.titulo}</h3>
+      <p>{video.descripcion}</p>
+      <button onClick={onEditClick}>Editar</button>
+      <button onClick={onDeleteClick}>Borrar</button>
+    </div>
+  );
+}
+
+export default VideoCard;
